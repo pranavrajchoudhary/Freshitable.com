@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper Locals - Fresh Farms Near You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+            padding: 15px 30px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #32CD32;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, #32CD32, #2E8B57);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+            color: #32CD32;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .title {
+            font-size: 28px;
+            color: #2a9d8f;
+            margin-bottom: 10px;
+        }
+        .delivery {
+            font-size: 18px;
+            color: #e76f51;
+            margin-bottom: 20px;
+        }
+        .farms {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .farm-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+        }
+        .farm-card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+        }
+        .farm-card h3 {
+            margin: 10px 0;
+            color: #264653;
+        }
+        .farm-card p {
+            font-size: 14px;
+            color: #606060;
+        }
+        .order-btn {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .order-btn:hover {
+            background: #d62828;
+        }
+        /* About Us Section */
+        .about-section {
+            background: #2a9d8f;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .about-section h2 {
+            font-size: 24px;
+        }
+        .about-section p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.jpeg" alt="Freshtible Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="DirectFromFarm.html">Direct From Farm</a></li>
+            <li><a href="hyperlocal.html">Hyper Local</a></li>
+            <li><a href="hungry.html">Hungry</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="cta-btn">Join Us</button>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="title">🌱 Hyper Locals - Fresh from Nearby Farms</h1>
+        <p class="delivery">📦 Delivery in 1 Day</p>
+
+        <div class="farms">
+            <div class="farm-card">
+                <img src="f1.png" alt="Farm 1">
+                <h3>Green Valley Farm</h3>
+                <p>Fresh organic vegetables directly from the farm to your home.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+
+            <div class="farm-card">
+                <img src="f2.png" alt="Farm 2">
+                <h3>Sunny Meadows Farm</h3>
+                <p>Locally grown, pesticide-free crops ensuring quality food.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+
+            <div class="farm-card">
+                <img src="f3.png" alt="Farm 3">
+                <h3>Harvest Haven</h3>
+                <p>Supporting local farmers and bringing fresh produce to you.</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>Hyper Locals is dedicated to delivering fresh, locally grown farm produce directly to consumers. 
+        By supporting local farmers, we ensure sustainability and provide the freshest ingredients to your doorstep. 
+        Our one-day delivery service ensures that you get high-quality, organic food straight from the farm.</p>
+    </div>
+
+</body>
+</html>

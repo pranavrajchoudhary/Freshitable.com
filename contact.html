@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hyper Locals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+            padding: 15px 30px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #32CD32;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, #32CD32, #2E8B57);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+            color: #32CD32;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h2 {
+            color: #2a9d8f;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #d62828;
+        }
+        .message {
+            color: green;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.jpeg" alt="Freshtible Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="DirectFromFarm.html">Direct From Farm</a></li>
+            <li><a href="hyperlocal.html">Hyper Local</a></li>
+            <li><a href="hungry.html">Hungry</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="cta-btn">Join Us</button>
+    </nav>
+
+
+    <div class="container">
+        <h2>📩 Contact Us</h2>
+        <p>Have questions? Fill out the form below and we'll get back to you!</p>
+        
+        <form class="contact-form" onsubmit="return submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <p class="message" id="successMessage"></p>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();  // Form reload hone se roke ga
+            document.getElementById("successMessage").innerText = "✅ Your message has been sent successfully!";
+            
+            // Form fields clear karne ke liye
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            
+            return false;
+        }
+    </script>
+
+</body>
+</html>

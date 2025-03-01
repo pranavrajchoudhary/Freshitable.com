@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshtible | Fresh & Safe</title>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+            padding: 15px 30px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #32CD32;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, #32CD32, #2E8B57);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+            color: #32CD32;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 80%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #32CD32, #2E8B57);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #32CD32;
+        }
+          /* About Us Section */
+          .about {
+            background: #222;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            color: #32CD32;
+            margin-bottom: 10px;
+        }
+
+        .about p {
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about span {
+            color: #32CD32;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .action-buttons {
+            margin-top: 20px;
+        }
+
+        .action-buttons .btn {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer {
+            background: #006400;
+            padding: 40px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .footer div {
+            margin-bottom: 20px;
+        }
+
+        .footer h3 {
+            color: #32CD32;
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.jpeg" alt="Freshtible Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="DirectFromFarm.html">Direct From Farm</a></li>
+            <li><a href="hyperlocal.html">Hyper Local</a></li>
+            <li><a href="hungry.html">Hungry</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="cta-btn">Join Us</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="hvdo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Farmers & Customers Connection</h1>
+            <p>Smiles everywhere with fresh & safe food directly from the farm.</p>
+            <div class="action-buttons">
+                <button class="btn">Join as Farmer/Seller</button>
+                <button class="btn">Have Your Smile (Register)</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Freshtible</h2>
+        <p>Freshtible connects farmers and customers directly, ensuring fresh, safe, and locally sourced food. Our mission is to bring smiles through healthy eating and support sustainable agriculture.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <h3>Contact Us</h3>
+            <p>Email: contact@freshtible.com</p>
+            <p>Phone: +91 12345 67890</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>

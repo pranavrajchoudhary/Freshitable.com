@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry? Order Now!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+            padding: 15px 30px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #32CD32;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, #32CD32, #2E8B57);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #fff;
+            color: #32CD32;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .title {
+            font-size: 28px;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        .delivery {
+            font-size: 18px;
+            color: #457b9d;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 150px;
+        }
+        .card img {
+           width: 150px;
+           height: 150px;
+           border-radius: 8px;
+           object-fit: cover; 
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        .card p {
+            font-weight: bold;
+        }
+        .card button {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background: #d62828;
+        }
+        .cart-title {
+            font-size: 24px;
+            color: #1d3557;
+            margin-top: 30px;
+        }
+        .cart {
+            margin-top: 10px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+        .empty-cart {
+            color: gray;
+        }
+        #cart-items {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #clear-cart {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.jpeg" alt="Freshtible Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="DirectFromFarm.html">Direct From Farm</a></li>
+            <li><a href="hyperlocal.html">Hyper Local</a></li>
+            <li><a href="hungry.html">Hungry</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="cta-btn">Join Us</button>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="title">🛒 HUNGRY? Order Now!</h1>
+        <p class="delivery">📦 Delivery in 30 mins</p>
+
+        <div class="products">
+            <div class="card" data-id="1" data-name="Aloo" data-price="40">
+                <img src="potato.png" alt="Aloo">
+                <h3>potato</h3>
+                <p>₹40</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="card" data-id="2" data-name="Tamatar" data-price="70">
+                <img src="tomato.png" alt="Tamatar">
+                <h3>Tomato</h3>
+                <p>₹70</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="card" data-id="3" data-name="Pyaaz" data-price="60">
+                <img src="carrot.png" alt="Pyaaz">
+                <h3>carrot</h3>
+                <p>₹60</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2 class="cart-title">🛍 Your Cart</h2>
+        <div class="cart">
+            <p class="empty-cart">Cart is empty!</p>
+            <ul id="cart-items"></ul>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cartItemsContainer = document.getElementById("cart-items");
+            const clearCartButton = document.getElementById("clear-cart");
+            const emptyCartMessage = document.querySelector(".empty-cart");
+
+            function updateCartUI() {
+                cartItemsContainer.innerHTML = "";
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = "block";
+                    clearCartButton.style.display = "none";
+                } else {
+                    emptyCartMessage.style.display = "none";
+                    clearCartButton.style.display = "block";
+                }
+
+                cart.forEach((item, index) => {
+                    const li = document.createElement("li");
+                    li.classList.add("cart-item");
+                    li.innerHTML = `${item.name} - ₹${item.price} <button onclick="removeFromCart(${index})">❌</button>`;
+                    cartItemsContainer.appendChild(li);
+                });
+            }
+
+            function addToCart(item) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.push(item);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartUI();
+            }
+
+            window.removeFromCart = (index) => {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartUI();
+            };
+
+            clearCartButton.addEventListener("click", () => {
+                localStorage.removeItem("cart");
+                updateCartUI();
+            });
+
+            document.querySelectorAll(".add-to-cart").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const card = button.closest(".card");
+                    const item = {
+                        id: card.dataset.id,
+                        name: card.dataset.name,
+                        price: card.dataset.price,
+                    };
+                    addToCart(item);
+                });
+            });
+
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
